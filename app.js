@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sass = require('node-sass');
+var sassMiddleware = require('node-sass-middleware');
 
 
 var app = express();
@@ -18,7 +19,9 @@ app.set('view engine', 'jade');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -53,6 +56,16 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+//sass configuration
+app.use(
+    sassMiddleware({
+        src: __dirname + '/public/stylesheets/sass', //where the sass files are
+        dest: __dirname + '/public/stylesheets', //where css should go
+        debug: true // obvious,
+
+    })
+);
 
 app.set('port', process.env.PORT || 3000);
 // app.listen(app.get('port'), function() {
