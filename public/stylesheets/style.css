@@ -1,8 +1,39 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+.hbtext{
+	color: #fff;
+	text-align: center;
+	font-size: 100px;
+	-moz-animation-name: slideout;
+	-webkit-animation-name: slideout;
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
 }
 
 a {
   color: #00B7FF;
+}
+
+@-moz-keyframes slideout{
+	from{
+		font-size: 36px;
+	}
+
+	to{
+		font-size: 100px;
+	}
+}
+
+@-webkit-keyframes slideout{
+	from{
+		font-size: 36px;
+	}
+
+	to{
+		font-size: 100px;
+	}
 }

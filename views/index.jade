@@ -1,9 +1,17 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
-
+	div.container-fluid
+		div.row
+			div.col-md-3
+			div.col-md-6.col-centered
+				h1.hbtext 
+					| HAPPY 
+					br
+					| BIRTHDAY
+			div.col-md-3
+		div.row
+			div.col-md-4
 block toplinks
 	link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css")
 	link(rel='stylesheet', href='/stylesheets/style.css')
