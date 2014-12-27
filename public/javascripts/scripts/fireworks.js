@@ -1,5 +1,5 @@
 function startFireworks() {
-
+  /*The following code was copied from http://jsfiddle.net/dtrooper/AceJJ/ */
   var SCREEN_WIDTH = window.innerWidth,
     SCREEN_HEIGHT = window.innerHeight,
     mousePos = {

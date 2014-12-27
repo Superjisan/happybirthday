@@ -1,32 +1,59 @@
 extends layout
 
 block content
-	div.container-fluid.birthdayDiv
-		div.row
-			div.col-md-3
-			div.col-md-6.col-centered
-				h1.hbtext 
-					| HAPPY 
-					br
-					| BIRTHDAY
-					br
-					| #{name}
-			div.col-md-3
-		div.row 
-			div.greetChoice CHOOSE YOUR GREETING
-		div.row
-			div.col-md-4.greeting
-				.choice
-					.choiceTitle Personal Video
-			div.col-md-4.quote
-				.choice
-					.choiceTitle Inspirational Quote
-			div.col-md-4.randomVideo
-				.choice
-					.choiceTitle Random Funny
+	div.birthdayDiv(id="birthday-slidr")
+		div.container-fluid.birthdayChoices(data-slidr="one")
+			div.row
+				div.col-md-3
+				div.col-md-6.col-centered
+					h1.hbtext 
+						| HAPPY 
+						br
+						| BIRTHDAY
+						br
+						| #{name}
+				div.col-md-3
+			div.row 
+				div.greetChoice CHOOSE YOUR GREETING
+			div.row.choices
+				div.col-md-4.greeting(onclick="slide('personal')")
+					.choice
+						.choiceTitle Personal Video
+				div.col-md-4.quote(onclick="slide('quote')")
+					.choice
+						.choiceTitle Inspirational Quote
+				div.col-md-4.randomVideo(onclick="slide('random')")
+					.choice
+						.choiceTitle Random Funny
+			div.pauseFireworks
+				i.fa.fa-pause(onclick="fireworksPause()")
+				i.fa.fa-play.hidden(onclick="fireworksPlay()")
+		div.container-fluid.personal(data-slidr="two")
+			div.back(onclick="slide('birthday')")
+				i.fa.fa-arrow-circle-left
+			div.row
+				div.col-md-3
+				div.col-md-6
+					h1.hbtext PERSONAL GREETING
+		div.container-fluid.quotes(data-slidr="three")
+			div.back(onclick="slide('birthday')")
+				i.fa.fa-arrow-circle-left
+			div.row
+				div.col-md-3
+				div.col-md-6
+					h1.hbtext Inspirational Quotes
+		div.container-fluid.random(data-slidr="four")
+			div.back(onclick="slide('birthday')")
+				i.fa.fa-arrow-circle-left
+			div.row
+				div.col-md-3
+				div.col-md-6
+					h1.hbtext Hope you find this amusing
+
 		
 
 block furtherscripts
 	//- scripts
+	script(src="/lib/slidr/slidr.js")
 	script(src="/javascripts/scripts/fireworks.js")
 	script(src="/javascripts/scripts/birthday.js")

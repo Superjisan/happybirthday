@@ -5,6 +5,10 @@ body {
   overflow: hidden
 }
 
+.container-fluid{
+	width: 100%;
+}
+
 .birthdayDiv{
 	position: absolute;
 	z-index: 999;
@@ -44,7 +48,7 @@ a {
 
 
 .greetChoice{
-	display: block;
+	display: none;
 	color: #fff;
 	margin-left:auto;
 	margin-right:auto;
@@ -55,16 +59,58 @@ a {
 	-mos-animation: fadein 4s;
 }
 
+.choices{
+	display: none;
+}
+
 .choice{
 	border: 1px solid blue;
 	height: 20em ;
 	border-radius: 5px;
+	-webkit-animation: fadein 4s;
+	-mos-animation: fadein 4s;
 }
 
 .choiceTitle{
 	text-align: center;
 	font-size: 2em;
 	color: #B25D5D;
+}
+
+.pauseFireworks{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top:25px;
+	right: 0;
+	display: none;
+}
+
+.fa.hidden{
+	display: none;
+
+}
+
+.pauseFireworks .fa{
+	color: #fff;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.back{
+	position: absolute;
+	top: 2.1em;
+	left: 0;
+	cursor: pointer;
+}
+
+.back .fa{
+	font-size: 24px;
+	color: #fff;
+}
+
+.greeting, .quote, .randomVideo{
+	cursor: pointer;
 }
 
 
