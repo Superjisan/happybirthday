@@ -1,0 +1,53 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+.hbtext{
+	color: #fff;
+	text-align: center;
+	font-size: 100px;
+	-moz-animation-name: slideout;
+	-webkit-animation-name: slideout;
+	-moz-animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+}
+
+.name{
+	height: 60px;
+	width: 450px;
+	font-size: 30px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.genBtn{
+	display: block;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+@-moz-keyframes slideout{
+	from{
+		font-size: 16px;
+	}
+
+	to{
+		font-size: 100px;
+	}
+}
+
+@-webkit-keyframes slideout{
+	from{
+		font-size: 16px;
+	}
+
+	to{
+		font-size: 100px;
+	}
+}

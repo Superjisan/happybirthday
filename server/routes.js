@@ -11,4 +11,5 @@ module.exports = function(app) {
     //   DELETE  /resources/:id      ->  destroy
 
     app.use('/', index);
+    app.use('/api/v1/:name', index);
 };

@@ -3,6 +3,23 @@ html
   head
     title= title
     block toplinks
+     link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css")
+     link(rel='stylesheet' href='/stylesheets/style.css')
+     link(rel="stylesheet" href='http://fonts.googleapis.com/css?family=Montserrat:400,700' type='text/css')
   body
     block content
     block bottomscript
+     script(src="/lib/jquery/dist/jquery.min.js")
+     script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
+     //- <!-- Angular JS files -->
+     script(src="/lib/angular/angular.min.js")
+     script(src="/lib/angular-cookies/angular-cookies.js")
+     script(src='/lib/angular-resource/angular-resource.js')
+     script(src='/lib/angular-ui-router/release/angular-ui-router.js')
+     //- <!-- MyAngular Init -->
+     script(src="/javascripts/app.js")
+     //- Angular Controllers
+     //- Angular Services
+     //-Other JavaScript files
+     script(src="/javascripts/scripts/script.js")
+    block furtherscripts

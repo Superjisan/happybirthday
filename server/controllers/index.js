@@ -8,4 +8,12 @@ router.get('/', function(req, res) {
     });
 });
 
+router.get('/api/v1/:name', function(req, res) {
+    console.log('name', req.params.name);
+    res.render('birthday', {
+        title: 'Happy Birthday',
+        name: req.params.name
+    })
+});
+
 module.exports = router;

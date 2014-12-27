@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	div.container-fluid.birthdayDiv
+		div.row
+			div.col-md-3
+			div.col-md-6.col-centered
+				h1.hbtext 
+					| HAPPY 
+					br
+					| BIRTHDAY
+					br
+					| #{name}
+			div.col-md-3
+		div.row 
+			div.greetChoice CHOOSE YOUR GREETING
+		div.row
+			div.col-md-4.greeting
+				.choice
+					.choiceTitle Personal Video
+			div.col-md-4.quote
+				.choice
+					.choiceTitle Inspirational Quote
+			div.col-md-4.randomVideo
+				.choice
+					.choiceTitle Random Funny
+		
+
+block furtherscripts
+	//- scripts
+	script(src="/javascripts/scripts/fireworks.js")
+	script(src="/javascripts/scripts/birthday.js")

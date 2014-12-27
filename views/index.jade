@@ -12,24 +12,9 @@ block content
 			div.col-md-3
 		div.row
 			div.col-md-4
-block toplinks
-	link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css")
-	link(rel='stylesheet', href='/stylesheets/style.css')
-
-block bottomscript
-	//- <!-- Bootstrap and JQuery -->
-	script(src="/lib/jquery/dist/jquery.min.js")
-	script(src="/lib/bootstrap/dist/js/bootstrap.min.js")
-
-	//- <!-- Angular JS files -->
-	script(src="/lib/angular/angular.min.js")
-	script(src="/lib/angular-cookies/angular-cookies.js")
-	script(src='/lib/angular-resource/angular-resource.js')
-	script(src='/lib/angular-ui-router/release/angular-ui-router.js')
-
-	//- <!-- My Angular Init -->
-	script(src="/javascripts/app.js")
-
-	//- Angular Controllers
-
-	//- Angular Services
+			div.col-md-4
+				input.name(id="nameInput" placeholder="What's yo name delicate?")
+			div.col-md-4
+		div.row
+			button.btn.btn-success.btn-lg.genBtn(onclick="generatePage()") Generate Message
+	
