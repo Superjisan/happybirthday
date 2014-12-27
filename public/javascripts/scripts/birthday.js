@@ -10,7 +10,7 @@ if (windowWidth > 320 && windowWidth < 480) {
   $(".rockyfa").removeClass("hidden");
 } else {
   var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
-  rockyAudio.play();
+  playRocky();
 }
 
 $(window).resize(function() {
@@ -76,14 +76,14 @@ function display(className) {
 
 function fireworksPause() {
   console.log("inside fireworksPause");
-  $(".fa-pause").addClass("hidden");
-  $(".fa-play").removeClass("hidden");
+  $(".pauseFireworks .fa-pause").addClass("hidden");
+  $(".pauseFireworks .fa-play").removeClass("hidden");
   fireworkAudio.pause();
 }
 
 function fireworksPlay() {
-  $(".fa-play").addClass("hidden");
-  $(".fa-pause").removeClass("hidden");
+  $(".pauseFireworks .fa-play").addClass("hidden");
+  $(".pauseFireworks .fa-pause").removeClass("hidden");
   fireworkAudio.play();
 }
 
