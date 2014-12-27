@@ -1,10 +1,25 @@
 setTimeout(function() {
   $("span.name").css("display", "inline-block");
+  showEverything();
 }, 15000);
 
 
-var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
-rockyAudio.play();
+
+var windowWidth = window.innerWidth;
+if (windowWidth > 320 && windowWidth < 480) {
+  $(".rockyfa").removeClass("hidden");
+} else {
+  var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
+  rockyAudio.play();
+}
+
+$(window).resize(function() {
+  $(".birthdayDiv").css({
+    "height": window.innerHeight + "px",
+    "width": window.innerWidth * .9 + "px"
+  })
+})
+
 
 var fireworkAudio = new Audio('/media/audio/firework.mp3');
 fireworkAudio.addEventListener('ended', function() {
@@ -16,17 +31,41 @@ rockyAudio.ontimeupdate = function() {
   var intTime = Math.floor(this.currentTime);
   if (intTime >= 30) {
     this.pause();
-    showEverything();
+    showFireworks();
+    // showEverything();
+    $(".rockyfa").addClass("hidden");
+    $(".rockyfapause").addClass("hidden");
   }
+}
+
+function playRocky() {
+  rockyAudio.play();
+  $(".rockyfa").addClass("hidden");
+  $(".rockyfapause").removeClass("hidden");
+}
+
+function pauseRocky() {
+  rockyAudio.pause();
+  $("rockyfa").removeClass("hidden");
+  $("rockyfapause").addClass("hidden");
+}
+
+function showFireworks() {
+  startFireworks();
+  setTimeout(function() {
+    $(".birthdayDiv").css({
+      "height": window.innerHeight + "px",
+      "width": window.innerWidth * .9 + "px"
+    })
+  }, 2000)
+  setTimeout(fireworkAudio.play(), 1000);
 }
 
 
 function showEverything() {
   display("greetChoice");
   display("choices");
-  display("pauseFireworks")
-  startFireworks();
-  setTimeout(fireworkAudio.play(), 2000);
+  display("pauseFireworks");
 }
 
 // showEverything();

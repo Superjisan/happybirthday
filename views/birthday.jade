@@ -4,7 +4,9 @@ block content
 	div.birthdayDiv(id="birthday-slidr")
 		div.container-fluid.birthdayChoices(data-slidr="one")
 			div.row
-				div.col-md-3
+				div.col-md-3.rockyplay
+					i.fa.fa-play.rockyfa(onclick="playRocky()")
+					i.fa.fa-pause.rockyfapause.hidden(onclick="pauseRocky()")
 				div.col-md-6.col-centered
 					h1.hbtext 
 						| HAPPY 

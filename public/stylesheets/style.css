@@ -15,6 +15,12 @@ body {
 	width: 90%;
 }
 
+.rockyplay .fa-play, .rockyfapause{
+	font-size: 24px;
+	color: #fff;
+}
+
+
 .hbtext{
 	color: #fff;
 	text-align: center;
@@ -33,6 +39,9 @@ body {
 	border-radius: 5px;
 	text-align: center;
 	margin-bottom: 10px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 span.name {
@@ -74,14 +83,9 @@ a {
 	border: 1px solid blue;
 	height: 20em ;
 	border-radius: 5px;
+	margin: 10px;
 	-webkit-animation: fadein 4s;
 	-mos-animation: fadein 4s;
-}
-
-.choiceTitle{
-	text-align: center;
-	font-size: 2em;
-	color: #B25D5D;
 }
 
 .choice img{
@@ -91,6 +95,14 @@ a {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.choiceTitle{
+	text-align: center;
+	font-size: 2em;
+	color: #B25D5D;
+}
+
+
 
 .pauseFireworks{
 	position: absolute;
@@ -103,7 +115,6 @@ a {
 
 .fa.hidden{
 	display: none;
-
 }
 
 .pauseFireworks .fa{
@@ -117,6 +128,7 @@ a {
 	top: 2.1em;
 	left: 0;
 	cursor: pointer;
+	z-index: 99;
 }
 
 .back .fa{
@@ -188,7 +200,7 @@ p.snippet{
 	margin-right: auto;
 	margin-left: auto;
 }
-
+chrlo
 @-moz-keyframes slideout{
 	from{
 		font-size: 16px;
@@ -216,4 +228,23 @@ p.snippet{
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+	.choice{
+		height : 560px;
+	}
+
+	.choice img{
+		height : 90%;
+	}
+
+	.fa{
+		font-size: 50px;
+	}
+
+	body{
+		overflow: auto
+	}
 }
