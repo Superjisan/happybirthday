@@ -4,7 +4,7 @@ setTimeout(function() {
 
 
 var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
-  // rockyAudio.play();
+rockyAudio.play();
 
 var fireworkAudio = new Audio('/media/audio/firework.mp3');
 fireworkAudio.addEventListener('ended', function() {
@@ -26,10 +26,10 @@ function showEverything() {
   display("choices");
   display("pauseFireworks")
   startFireworks();
-  // setTimeout(fireworkAudio.play(), 2000);
+  setTimeout(fireworkAudio.play(), 2000);
 }
 
-showEverything();
+// showEverything();
 
 function display(className) {
   $("." + className).css("display", "block");
@@ -52,7 +52,6 @@ var slides = slidr.create('birthday-slidr', {
   controls: 'none'
 }).start();
 
-// slidr.create('slidr-ul').start();
 
 function slide(elem) {
   switch (elem) {
@@ -72,4 +71,14 @@ function slide(elem) {
       slides.slide('right');
       break
   }
+};
+
+function randomtry() {
+  console.log("inside randomtry");
+  //TODO: backend call to get random funny video/audio/image/link
+}
+
+function quotetry() {
+  console.log("inside quotetry");
+  //TODO: backend call to get specific inspirtational quotes
 }

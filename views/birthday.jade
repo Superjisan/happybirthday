@@ -27,6 +27,7 @@ block content
 				div.col-md-4.randomVideo(onclick="slide('random')")
 					.choice
 						.choiceTitle Random Funny
+						img(src="/images/random.png")
 			div.pauseFireworks
 				i.fa.fa-pause(onclick="fireworksPause()")
 				i.fa.fa-play.hidden(onclick="fireworksPlay()")
@@ -56,15 +57,36 @@ block content
 				div.col-md-3
 				div.col-md-6
 					h1.hbtext Inspirational Quotes
+			div.row
+				article
+					blockquote
+						p Rule #1 : It's going to be alright. There are really no other options.
+						footer Jisan Zaman
+			div.row
+				button.btn.btn-lg.tryanother(onclick="quotetry()")
+					i.fa.fa-refresh  Try Another
 		div.container-fluid.random(data-slidr="four")
 			div.back(onclick="slide('birthday')")
 				i.fa.fa-arrow-circle-left
 			div.row
 				div.col-md-3
 				div.col-md-6
-					h1.hbtext Hope you find this amusing
+					h1.hbtextpersonal Hope you find this amusing
+			div.row.randomContent
+				div.video
+					iframe.youtube(src="https://www.youtube.com/v/TPXWZxtDooY")
+					p.snippet The greatest rendition of holiday spirit I've ever seen.
+				div.audio.hidden
+					audio
+						source
+					p.snippet
+				div.picture.hidden
+					img
+					p.snippet
+			div.row
+				button.btn.btn-lg.tryanother(onclick="randomtry()")
+					i.fa.fa-refresh  Try Another
 
-		
 
 block furtherscripts
 	//- scripts
