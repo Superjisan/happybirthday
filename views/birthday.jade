@@ -11,7 +11,7 @@ block content
 						br
 						| BIRTHDAY
 						br
-						| #{name}
+						span.name #{name}
 				div.col-md-3
 			div.row 
 				div.greetChoice CHOOSE YOUR GREETING
@@ -19,9 +19,11 @@ block content
 				div.col-md-4.greeting(onclick="slide('personal')")
 					.choice
 						.choiceTitle Personal Video
+						img.personalthumb(src="/images/personalmessage.png")
 				div.col-md-4.quote(onclick="slide('quote')")
 					.choice
 						.choiceTitle Inspirational Quote
+						img(src="/images/quotes.jpg")
 				div.col-md-4.randomVideo(onclick="slide('random')")
 					.choice
 						.choiceTitle Random Funny
@@ -34,7 +36,19 @@ block content
 			div.row
 				div.col-md-3
 				div.col-md-6
-					h1.hbtext PERSONAL GREETING
+					h1.hbtextpersonal PERSONAL GREETING
+			div.row
+					iframe.youtube(src="https://www.youtube.com/v/U3_clrpC3jI" allowfullscreen frameborder="1")
+			div.row
+				p.personalmessage 
+					| Happy Birthday #{name}! 
+					br
+					|I miss you and I hope you have the best day. 
+					br
+					|Keep rockin' and keep in touch. 
+					|Sincerely,
+					br
+					| Jisan
 		div.container-fluid.quotes(data-slidr="three")
 			div.back(onclick="slide('birthday')")
 				i.fa.fa-arrow-circle-left

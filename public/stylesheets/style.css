@@ -35,6 +35,14 @@ body {
 	margin-bottom: 10px;
 }
 
+span.name {
+	display : none;
+	font-size: 100px;
+	height: 110px;
+	-moz-animation: slideout 3s;
+	-webkit-animation: slideout 3s;
+}
+
 .genBtn{
 	display: block;
 	margin-right:auto;
@@ -45,7 +53,6 @@ body {
 a {
   color: #00B7FF;
 }
-
 
 .greetChoice{
 	display: none;
@@ -75,6 +82,14 @@ a {
 	text-align: center;
 	font-size: 2em;
 	color: #B25D5D;
+}
+
+.choice img{
+	width: 90%;
+	height: 15em;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .pauseFireworks{
@@ -112,6 +127,32 @@ a {
 .greeting, .quote, .randomVideo{
 	cursor: pointer;
 }
+
+
+.youtube{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	height: 30em;
+	width: 50%;
+	border: 2px gray double;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.hbtextpersonal{
+	color: #fff;
+	text-align: center;
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.personalmessage{
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+}
+
 
 
 @-moz-keyframes slideout{

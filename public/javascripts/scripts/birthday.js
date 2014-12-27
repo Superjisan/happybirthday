@@ -1,3 +1,8 @@
+setTimeout(function() {
+  $("span.name").css("display", "inline-block");
+}, 15000);
+
+
 var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
   // rockyAudio.play();
 
@@ -10,7 +15,6 @@ fireworkAudio.addEventListener('ended', function() {
 rockyAudio.ontimeupdate = function() {
   var intTime = Math.floor(this.currentTime);
   if (intTime >= 30) {
-    console.log("time to pause");
     this.pause();
     showEverything();
   }
@@ -22,7 +26,7 @@ function showEverything() {
   display("choices");
   display("pauseFireworks")
   startFireworks();
-  setTimeout(fireworkAudio.play(), 2000);
+  // setTimeout(fireworkAudio.play(), 2000);
 }
 
 showEverything();
@@ -51,7 +55,6 @@ var slides = slidr.create('birthday-slidr', {
 // slidr.create('slidr-ul').start();
 
 function slide(elem) {
-  console.log("slide is getting fired with elem", elem);
   switch (elem) {
     case "personal":
       slides.slide('two');
