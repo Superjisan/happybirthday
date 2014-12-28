@@ -1,6 +1,5 @@
 body {
   padding: 50px;
-  padding-top: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   /*overflow: hidden*/
@@ -110,7 +109,7 @@ a {
 .choiceTitle{
 	text-align: center;
 	font-size: 2em;
-	color: #B25D5D;
+	color: #99F093;
 }
 
 .pauseFireworks{
