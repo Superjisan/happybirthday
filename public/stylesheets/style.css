@@ -240,7 +240,7 @@ p.snippet{
 }
 
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 640px){
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px){
 	/*.choice{
 		height : 560px;
 	}
