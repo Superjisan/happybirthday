@@ -3,8 +3,8 @@ function startFireworks() {
   var $canvas = $("canvas");
   console.log($canvas);
   if ($canvas.length == 0) {
-    var SCREEN_WIDTH = window.innerWidth,
-      SCREEN_HEIGHT = window.innerHeight,
+    var SCREEN_WIDTH = $(window).width(),
+      SCREEN_HEIGHT = $(window).height(),
       mousePos = {
         x: 400,
         y: 300
@@ -175,11 +175,11 @@ function startFireworks() {
 
     function loop() {
       // update screen size
-      if (SCREEN_WIDTH != window.innerWidth) {
-        canvas.width = SCREEN_WIDTH = window.innerWidth;
+      if (SCREEN_WIDTH != $(window).width()) {
+        canvas.width = SCREEN_WIDTH = $(window).width();
       }
-      if (SCREEN_HEIGHT != window.innerHeight) {
-        canvas.height = SCREEN_HEIGHT = window.innerHeight;
+      if (SCREEN_HEIGHT != $(window).height()) {
+        canvas.height = SCREEN_HEIGHT = $(window).height();
       }
 
       // clear canvas

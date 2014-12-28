@@ -5,18 +5,29 @@ setTimeout(function() {
 
 
 
-var windowWidth = window.innerWidth;
+var rockyAudio = new Audio('/media/audio/roackytheme.mp3');
+var windowWidth = $(window).width();
 if (windowWidth > 320 && windowWidth < 480) {
   $(".rockyfa").removeClass("hidden");
 } else {
-  var rockyAudio = new Audio('/media/audio/roackytheme.mp3')
   playRocky();
+  setTimeout(function() {
+    console.log("rockyAudio currentTime", rockyAudio.currentTime);
+    if (rockyAudio.currentTime === 0) {
+      pauseRocky();
+    }
+  }, 2000);
 }
 
 $(window).resize(function() {
   $(".birthdayDiv").css({
-    "height": window.innerHeight + "px",
-    "width": window.innerWidth * .9 + "px"
+    "height": $(window).height() + "px",
+    "width": $(window).width() * .9 + "px"
+  });
+
+  $(".container-fluid").css({
+    "height": $(window).height() + "px",
+    "width": $(window).width() * .9 + "px"
   })
 })
 
@@ -46,26 +57,33 @@ function playRocky() {
 
 function pauseRocky() {
   rockyAudio.pause();
-  $("rockyfa").removeClass("hidden");
-  $("rockyfapause").addClass("hidden");
+  $(".rockyfa").removeClass("hidden");
+  $(".rockyfapause").addClass("hidden");
 }
 
 function showFireworks() {
   startFireworks();
   setTimeout(function() {
     $(".birthdayDiv").css({
-      "height": window.innerHeight + "px",
-      "width": window.innerWidth * .9 + "px"
+      "height": $(window).height() + "px",
+      "width": $(window).width() * .9 + "px"
+    });
+
+    $(".container-fluid").css({
+      "height": $(window).height() + "px",
+      "width": $(window).width() * .9 + "px"
     })
   }, 2000)
-  setTimeout(fireworkAudio.play(), 1000);
+  setTimeout(function() {
+    fireworkAudio.play();
+    display("pauseFireworks");
+  }, 1000);
 }
 
 
 function showEverything() {
   display("greetChoice");
   display("choices");
-  display("pauseFireworks");
 }
 
 // showEverything();
@@ -110,6 +128,7 @@ function slide(elem) {
       slides.slide('right');
       break
   }
+  $(window).scrollTop();
 };
 
 function randomtry() {
