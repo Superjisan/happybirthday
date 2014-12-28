@@ -20,15 +20,15 @@ if (windowWidth > 320 && windowWidth < 480) {
 }
 
 $(window).resize(function() {
-  $(".birthdayDiv").css({
-    "height": $(window).height() + "px",
-    "width": $(window).width() * .9 + "px"
-  });
+  // $(".birthdayDiv").css({
+  //   "height": $(window).height() + "px",
+  //   "width": $(window).width() + "px"
+  // });
 
-  $(".container-fluid").css({
-    "height": $(window).height() + "px",
-    "width": $(window).width() * .9 + "px"
-  })
+  // $(".container-fluid").css({
+  //   "height": $(window).height() + "px",
+  //   "width": $(window).width() + "px"
+  // })
 })
 
 
@@ -64,15 +64,15 @@ function pauseRocky() {
 function showFireworks() {
   startFireworks();
   setTimeout(function() {
-    $(".birthdayDiv").css({
-      "height": $(window).height() + "px",
-      "width": $(window).width() * .9 + "px"
-    });
+    // $(".birthdayDiv").css({
+    //   "height": $(window).height() + "px",
+    //   "width": $(window).width() + "px"
+    // });
 
-    $(".container-fluid").css({
-      "height": $(window).height() + "px",
-      "width": $(window).width() * .9 + "px"
-    })
+    // $(".container-fluid").css({
+    //   "height": $(window).height() + "px",
+    //   "width": $(window).width() + "px"
+    // })
   }, 2000)
   setTimeout(function() {
     fireworkAudio.play();

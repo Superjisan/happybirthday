@@ -14,6 +14,10 @@ body {
 	position: absolute;
 	z-index: 999;
 	width: 90%;
+	
+}
+
+.birthdayChoices{
 	overflow-y: auto !important;
 }
 
@@ -236,8 +240,8 @@ p.snippet{
 }
 
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
-	.choice{
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px){
+	/*.choice{
 		height : 560px;
 	}
 
@@ -261,6 +265,10 @@ p.snippet{
 		font-size: 100px;
 	}
 
+	span.name{
+		font-size: 100px;
+	}
+
 	@-moz-keyframes slideout{
 		from{
 			font-size: 16px;
@@ -277,16 +285,84 @@ p.snippet{
 		to{
 			font-size: 100px;
 		}
-	}
-}
+	}*/
+	/*landscape*/
+	@media only screen and (min-width: 361px){
+		.choice{
+			height: 360px;
+		}
 
-/*landscape*/
-@media only screen and (min-width: 321px){
-	.choice{
-		height: 360px;
+		.choice img{
+			height: 90%;
+		}
+
+		.youtube{
+			height: 22em;
+			width: 65%;
+		}
+
+		.random .hbtextpersonal{
+			font-size: 50px;
+		}
+
+		.randomContent{
+			margin-top: 20px;
+		}
 	}
 
-	.choice img{
-		height: 90%;
+	/*portrait*/
+	@media only screen and (max-width : 360px){
+		.choice{
+			height : 265px;
+		}
+
+		.hbtext{
+			font-size: 25px;
+		}
+
+		span.name{
+			height: 35px;
+			font-size: 30px;
+			width: auto;
+		}
+
+		body{
+			padding: 0;
+		}
+
+		.birthdayDiv{
+			width: 100%;
+		}
+
+		.greetChoice{
+			font-size: 15px;
+		}
+
+		.hbtextpersonal{
+			font-size: 25px;
+		}
+
+		.youtube{
+			height: 18em;
+			width: 90%;
+		}
+
+		@-moz-keyframes slideout{
+			from{
+				font-size: 1px;
+			}
+			to{
+				font-size: 25px;
+			}
+		}
+
+	@-webkit-keyframes slideout{
+			from{
+				font-size: 1px;
+			}
+			to{
+				font-size: 25px;
+			}
+		}
 	}
 }
