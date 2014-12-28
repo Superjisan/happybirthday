@@ -131,12 +131,55 @@ function slide(elem) {
   $(window).scrollTop();
 };
 
+var randomstuffs = [{
+  type: "video",
+  url: "",
+  snippet: ""
+}]
+
+
 function randomtry() {
   console.log("inside randomtry");
   //TODO: backend call to get random funny video/audio/image/link
 }
 
+var quotes = [{
+  quote: "Rule #1 : It's going to be alright. There are really no other options.",
+  author: "Anonymous"
+}, {
+  quote: "Violence is the last refuge of incompetence",
+  author: "Isaac Asimov"
+}, {
+  quote: "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has.",
+  author: "Margaret Meade"
+}, {
+  quote: " Don’t wait for something to be fully formed in your head to start on it. Just start, and then work it out as you go.",
+  author: "Brendon Stanton"
+}, {
+  quote: "Your work doesn't stress over you. Therefore, there's no point in stressing over it. It just needs you to do it",
+  author: "Anonymous"
+}];
+
 function quotetry() {
-  console.log("inside quotetry");
-  //TODO: backend call to get specific inspirtational quotes
+  var quoteArray = _.pluck(quotes, "quote");
+  var parElem = $("blockquote p");
+  var currentQuote = parElem.text();
+  var currentQuoteIndex = quoteArray.indexOf(currentQuote);
+  if (currentQuoteIndex !== quotes.length - 1) {
+    var quoteToReplace = quotes[currentQuoteIndex + 1].quote;
+    var authorToReplace = quotes[currentQuoteIndex + 1].author;
+  } else {
+    var quoteToReplace = quotes[0].quote;
+    var authorToReplace = quotes[0].author;
+  }
+  var footerElem = $("blockquote footer")
+  parElem.fadeTo("slow", 0);
+  footerElem.fadeTo("slow", 0);
+  setTimeout(function() {
+    parElem.text(quoteToReplace);
+    parElem.fadeTo("slow", 1);
+    footerElem.text(authorToReplace);
+    footerElem.fadeTo("slow", 1);
+  }, 1000);
+
 }
