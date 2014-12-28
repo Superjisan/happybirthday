@@ -197,6 +197,12 @@ blockquote footer{
 	display: none;
 }
 
+.randomContent .picture img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 p.snippet{
 	color: #fff;
 	font-size: 2em;

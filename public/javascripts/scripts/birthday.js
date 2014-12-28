@@ -133,13 +133,55 @@ function slide(elem) {
 
 var randomstuffs = [{
   type: "video",
-  url: "",
-  snippet: ""
-}]
+  url: "https://www.youtube.com/embed/TPXWZxtDooY?html5=1",
+  snippet: "The greatest rendition of holiday spirit I've ever seen"
+}, {
+  type: "picture",
+  url: "http://s3-ec.buzzfed.com/static/2013-11/enhanced/webdr03/21/11/anigif_enhanced-buzz-27249-1385051166-6.gif",
+  snippet: "This fella took not going to heaven with stride"
+}];
 
+var currentRandomSelection = 0;
 
 function randomtry() {
   console.log("inside randomtry");
+  var randomUrlArray = _.pluck(randomstuffs, "url");
+  var currentUrl = randomstuffs[currentRandomSelection].url;
+  var currentType = randomstuffs[currentRandomSelection].type;
+
+  if (currentRandomSelection !== randomstuffs.length - 1) {
+    currentRandomSelection++;
+  } else {
+    currentRandomSelection = 0;
+  }
+
+  var replacedType = randomstuffs[currentRandomSelection].type;
+  var replacedUrl = randomstuffs[currentRandomSelection].url;
+  var replacedSnippet = randomstuffs[currentRandomSelection].snippet;
+
+  if (currentType !== replacedType) {
+    $(".randomContent ." + currentType).addClass("hidden");
+    $(".randomContent ." + replacedType).removeClass("hidden");
+  }
+
+  switch (replacedType) {
+    case "video":
+      $(".randomContent .youtube").attr('src', replacedUrl);
+      $(".randomContent .video p.snippet").text(replacedSnippet);
+      break;
+    case "picture":
+      $(".randomContent .picture img").attr("src", replacedUrl);
+      $(".randomContent .picture p.snippet").text(replacedSnippet);
+      break;
+    case "audio":
+      $(".randomContent audio source").attr("src", replacedUrl);
+      $(".randomContent .audio p.snippet").text(replacedSnippet);
+      break
+    default:
+      console.error("replacedType is not defined properly")
+      break
+  }
+
   //TODO: backend call to get random funny video/audio/image/link
 }
 
