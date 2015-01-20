@@ -140,7 +140,9 @@ var randomstuffs = [{
   url: "http://s3-ec.buzzfed.com/static/2013-11/enhanced/webdr03/21/11/anigif_enhanced-buzz-27249-1385051166-6.gif",
   snippet: "This fella took not going to heaven with stride"
 }, {
-
+  type: "picture",
+  url: "http://i.giphy.com/V8oqg8niJIYFO.gif",
+  snippet: "Inappropriate for children much?"
 }];
 
 
