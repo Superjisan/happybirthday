@@ -139,7 +139,10 @@ var randomstuffs = [{
   type: "picture",
   url: "http://s3-ec.buzzfed.com/static/2013-11/enhanced/webdr03/21/11/anigif_enhanced-buzz-27249-1385051166-6.gif",
   snippet: "This fella took not going to heaven with stride"
+}, {
+
 }];
+
 
 var currentRandomSelection = 0;
 
