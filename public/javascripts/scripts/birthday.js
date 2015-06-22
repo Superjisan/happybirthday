@@ -16,17 +16,11 @@ if (windowWidth > 320 && windowWidth < 480) {
   $(".rockyfa").removeClass("hidden");
 } else {
   playRocky();
-  if (document.cookie == "initanimate=false") {
-    console.log("it's getting here");
-    pauseRocky();
-  } else {
-    setTimeout(function() {
-      console.log("rockyAudio currentTime", rockyAudio.currentTime);
-      if (rockyAudio.currentTime === 0) {
-        pauseRocky();
-      }
-    }, 2000);
-  }
+  setTimeout(function() {
+    if (rockyAudio.currentTime === 0) {
+      pauseRocky();
+    }
+  }, 2000);
 }
 
 
@@ -37,12 +31,16 @@ fireworkAudio.addEventListener('ended', function() {
 }, false);
 
 rockyAudio.ontimeupdate = function() {
-  var intTime = Math.floor(this.currentTime);
-  if (intTime >= 30) {
-    this.pause();
+  if (document.cookie == "initanimate=false") {
     showFireworks();
-    $(".rockyfa").addClass("hidden");
-    $(".rockyfapause").addClass("hidden");
+  } else {
+    var intTime = Math.floor(this.currentTime);
+    if (intTime >= 30) {
+      this.pause();
+      showFireworks();
+      $(".rockyfa").addClass("hidden");
+      $(".rockyfapause").addClass("hidden");
+    }
   }
 }
 
@@ -187,7 +185,6 @@ function quotetry() {
     footerElem.text(authorToReplace);
     footerElem.fadeTo("slow", 1);
   }, 1000);
-
 }
 
 $('.carousel').carousel({

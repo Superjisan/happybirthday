@@ -8,8 +8,10 @@ body {
 	width: 100%;
 }
 
-.birthdayDiv{
+.birthdaycontainer{
 	z-index: 999;
+	position: absolute;
+	top: 0;
 }
 
 .birthdayChoices{
