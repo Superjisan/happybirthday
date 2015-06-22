@@ -3,17 +3,16 @@ extends layout
 block content
 	div.container-fluid.birthdaycontainer
 		div.row
-			div.col-md-3.rockyplay
+			div.rockyplay
 				i.fa.fa-play.rockyfa(onclick="playRocky()")
 				i.fa.fa-pause.rockyfapause.hidden(onclick="pauseRocky()")
-			div.col-md-6.col-centered.col-sm-6.col-xs-12
+			div.col-md-12
 				h2.hbtext.text-center
 					| HAPPY 
 					br
 					| BIRTHDAY
 					br
 					| #{name}
-			div.col-md-3
 		div.pauseFireworks
 			i.fa.fa-pause(onclick="fireworksPause()")
 			i.fa.fa-play.hidden(onclick="fireworksPlay()")

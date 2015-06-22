@@ -26,13 +26,13 @@ input{
 }
 
 .rockyplay{
-	margin-top: 30px;
+	margin-left: 1rem;
+	font-size: 24px;
 }
 
 .rockyplay .fa-play, .rockyfapause{
 	font-size: 24px;
 	color: #fff;
-
 }
 
 
@@ -59,13 +59,6 @@ input{
 	margin-left: auto;
 }
 
-span.name {
-	display : none;
-	font-size: 75px;
-	height: 85px;
-	-moz-animation: slideout 3s;
-	-webkit-animation: slideout 3s;
-}
 
 .genBtn{
 	display: block;
@@ -95,7 +88,7 @@ a {
 }
 
 .choice{
-	border: 1px solid blue;
+	border: 1px solid rgb(81,81,81);
 	height: 18em ;
 	border-radius: 5px;
 	margin: 10px;
@@ -115,6 +108,9 @@ a {
 	text-align: center;
 	font-size: 2em;
 	color: #99F093;
+	text-overflow: ellipsis;
+  	overflow: hidden;
+  	white-space: nowrap;
 }
 
 .pauseFireworks{
