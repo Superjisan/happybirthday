@@ -7,7 +7,7 @@ block content
 				i.fa.fa-play.rockyfa(onclick="playRocky()")
 				i.fa.fa-pause.rockyfapause.hidden(onclick="pauseRocky()")
 			div.col-md-6.col-centered.col-sm-6.col-xs-12
-				h1.hbtext.text-center
+				h2.hbtext.text-center
 					| HAPPY 
 					br
 					| BIRTHDAY
@@ -17,22 +17,22 @@ block content
 		div.pauseFireworks
 			i.fa.fa-pause(onclick="fireworksPause()")
 			i.fa.fa-play.hidden(onclick="fireworksPlay()")
-		div.row 
-			div.greetChoice CHOOSE YOUR GREETING
 		div.row
 			.carousel.slide(data-ride="carousel" id="carousel-example-generic")
 				.carousel-inner
 					div.item.active
 						.row.choices
-							div.col-md-4.col-sm-4.col-xs-12.greeting(onclick="slide('personal')")
+							div.col-sm-12.col-xs-12.md-12
+								h3.text-center Choose Your Greeting
+							div.col-md-4.col-sm-4.col-xs-12.greeting(data-target="#carousel-example-generic" data-slide-to="1")
 								.choice
 									.choiceTitle Personal Video
 									img.personalthumb(src="/images/personalmessage.png")
-							div.col-md-4.col-sm-4.col-xs-12.quote(onclick="slide('quote')")
+							div.col-md-4.col-sm-4.col-xs-12.quote(data-target="#carousel-example-generic" data-slide-to="2")
 								.choice
 									.choiceTitle Inspirational Quote
 									img(src="/images/quotes.jpg")
-							div.col-md-4.col-sm-4.col-xs-12.randomVideo(onclick="slide('random')")
+							div.col-md-4.col-sm-4.col-xs-12.randomVideo(data-target="#carousel-example-generic" data-slide-to="3")
 								.choice
 									.choiceTitle Random Funny
 									img(src="/images/randomnonsense.jpg")
