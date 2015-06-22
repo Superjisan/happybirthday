@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   /*overflow: hidden*/
@@ -10,10 +9,7 @@ body {
 }
 
 .birthdayDiv{
-	position: absolute;
 	z-index: 999;
-	width: 90%;
-	
 }
 
 .birthdayChoices{
@@ -34,7 +30,7 @@ body {
 .hbtext{
 	color: #fff;
 	text-align: center;
-	font-size: 75px;
+	/*font-size: 75px;*/
 	-moz-animation-name: slideout;
 	-webkit-animation-name: slideout;
 	-moz-animation-duration: 15s;
@@ -132,7 +128,6 @@ a {
 }
 
 .back{
-	position: absolute;
 	top: 2.1em;
 	left: 0;
 	cursor: pointer;
@@ -163,7 +158,6 @@ a {
 .hbtextpersonal{
 	color: #fff;
 	text-align: center;
-	font-size: 70px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -220,7 +214,7 @@ p.snippet{
 		font-size: 16px;
 	}
 	to{
-		font-size: 75px;
+		font-size: 30px;
 	}
 }
 
@@ -229,7 +223,7 @@ p.snippet{
 		font-size: 16px;
 	}
 	to{
-		font-size: 75px;
+		font-size: 30px;
 	}
 }
 
@@ -246,51 +240,7 @@ p.snippet{
 
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px){
-	/*.choice{
-		height : 560px;
-	}
-
-	.choice img{
-		height : 90%;
-	}
-
-	.pauseFireworks .fa{
-		font-size: 50px;
-	}
-
-	body{
-		overflow: auto
-	}
-
-	.rockyplay .fa {
-		font-size: 50px;
-	}
-
-	.hbtext{
-		font-size: 100px;
-	}
-
-	span.name{
-		font-size: 100px;
-	}
-
-	@-moz-keyframes slideout{
-		from{
-			font-size: 16px;
-		}
-		to{
-			font-size: 100px;
-		}
-	}
-
-@-webkit-keyframes slideout{
-		from{
-			font-size: 16px;
-		}
-		to{
-			font-size: 100px;
-		}
-	}*/
+	
 	/*landscape*/
 	@media only screen and (min-width: 361px){
 		.choice{

@@ -1,96 +1,98 @@
 extends layout
 
 block content
-	div.birthdayDiv(id="birthday-slidr")
-		div.container-fluid.birthdayChoices(data-slidr="one")
-			div.row
-				div.col-md-3.rockyplay
-					i.fa.fa-play.rockyfa(onclick="playRocky()")
-					i.fa.fa-pause.rockyfapause.hidden(onclick="pauseRocky()")
-				div.col-md-6.col-centered
-					h1.hbtext 
-						| HAPPY 
-						br
-						| BIRTHDAY
-						br
-						span.name #{name}
-				div.col-md-3
-			div.row 
-				div.greetChoice CHOOSE YOUR GREETING
-			div.row.choices
-				div.col-md-4.greeting(onclick="slide('personal')")
-					.choice
-						.choiceTitle Personal Video
-						img.personalthumb(src="/images/personalmessage.png")
-				div.col-md-4.quote(onclick="slide('quote')")
-					.choice
-						.choiceTitle Inspirational Quote
-						img(src="/images/quotes.jpg")
-				div.col-md-4.randomVideo(onclick="slide('random')")
-					.choice
-						.choiceTitle Random Funny
-						img(src="/images/randomnonsense.jpg")
-			div.pauseFireworks
-				i.fa.fa-pause(onclick="fireworksPause()")
-				i.fa.fa-play.hidden(onclick="fireworksPlay()")
-		div.container-fluid.personal(data-slidr="two")
-			div.back(onclick="slide('birthday')")
-				i.fa.fa-arrow-circle-left
-			div.row
-				div.col-md-3
-				div.col-md-6
-					h1.hbtextpersonal PERSONAL GREETING
-			div.row
-					iframe.youtube(src="https://www.youtube.com/embed/U3_clrpC3jI?html5=1" allowfullscreen frameborder="1")
-			div.row
-				p.personalmessage 
-					| Happy Birthday #{name}! 
+	div.container-fluid
+		div.row
+			div.col-md-3.rockyplay
+				i.fa.fa-play.rockyfa(onclick="playRocky()")
+				i.fa.fa-pause.rockyfapause.hidden(onclick="pauseRocky()")
+			div.col-md-6.col-centered.col-sm-6.col-xs-12
+				h1.hbtext.text-center
+					| HAPPY 
 					br
-					|I miss you and I hope you have the best day. 
+					| BIRTHDAY
 					br
-					|Keep rockin' and keep in touch.
-					br
-					| Sincerely, Jisan
-		div.container-fluid.quotes(data-slidr="three")
-			div.back(onclick="slide('birthday')")
-				i.fa.fa-arrow-circle-left
-			div.row
-				div.col-md-3
-				div.col-md-6
-					h1.hbtext Inspirational Quotes
-			div.row
-				article
-					blockquote
-						p Rule #1 : It's going to be alright. There are really no other options.
-						footer Jisan Zaman
-			div.row
-				button.btn.btn-lg.tryanother(onclick="quotetry()")
-					i.fa.fa-refresh  Try Another
-		div.container-fluid.random(data-slidr="four")
-			div.back(onclick="slide('birthday')")
-				i.fa.fa-arrow-circle-left
-			div.row
-				div.col-md-3
-				div.col-md-6
-					h1.hbtextpersonal Hope you find this amusing
-			div.row.randomContent
-				div.video
-					iframe.youtube(src="https://www.youtube.com/embed/TPXWZxtDooY?html5=1")
-					p.snippet The greatest rendition of holiday spirit I've ever seen.
-				div.audio.hidden
-					audio
-						source
-					p.snippet
-				div.picture.hidden
-					img
-					p.snippet
-			div.row
-				button.btn.btn-lg.tryanother(onclick="randomtry()")
-					i.fa.fa-refresh  Try Another
+					| #{name}
+			div.col-md-3
+		div.pauseFireworks
+			i.fa.fa-pause(onclick="fireworksPause()")
+			i.fa.fa-play.hidden(onclick="fireworksPlay()")
+		div.row 
+			div.greetChoice CHOOSE YOUR GREETING
+		div.row
+			.carousel.slide(data-ride="carousel" id="carousel-example-generic")
+				.carousel-inner
+					div.item.active
+						.row.choices
+							div.col-md-4.col-sm-4.col-xs-12.greeting(onclick="slide('personal')")
+								.choice
+									.choiceTitle Personal Video
+									img.personalthumb(src="/images/personalmessage.png")
+							div.col-md-4.col-sm-4.col-xs-12.quote(onclick="slide('quote')")
+								.choice
+									.choiceTitle Inspirational Quote
+									img(src="/images/quotes.jpg")
+							div.col-md-4.col-sm-4.col-xs-12.randomVideo(onclick="slide('random')")
+								.choice
+									.choiceTitle Random Funny
+									img(src="/images/randomnonsense.jpg")
+					div.item.personal
+						div.row
+							div.col-md-3
+							div.col-md-6
+								h1.hbtextpersonal PERSONAL GREETING
+						div.row
+								iframe.youtube(src="https://www.youtube.com/embed/U3_clrpC3jI?html5=1" allowfullscreen frameborder="1")
+						div.row
+							p.personalmessage 
+								| Happy Birthday #{name}! 
+								br
+								|I miss you and I hope you have the best day. 
+								br
+								|Keep rockin' and keep in touch.
+								br
+								| Sincerely, Jisan
+					div.item.quotes
+						div.row
+							div.col-md-3
+							div.col-md-6
+								h1.hbtext Inspirational Quotes
+						div.row
+							article
+								blockquote
+									p Rule #1 : It's going to be alright. There are really no other options.
+									footer Jisan Zaman
+						div.row
+							button.btn.btn-lg.tryanother(onclick="quotetry()")
+								i.fa.fa-refresh  Try Another
+					div.item.random
+						div.row
+							div.col-md-3
+							div.col-md-6
+								h1.hbtextpersonal Hope you find this amusing
+						div.row.randomContent
+							div.video
+								iframe.youtube(src="https://www.youtube.com/embed/TPXWZxtDooY?html5=1")
+								p.snippet The greatest rendition of holiday spirit I've ever seen.
+							div.audio.hidden
+								audio
+									source
+								p.snippet
+							div.picture.hidden
+								img
+								p.snippet
+						div.row
+							button.btn.btn-lg.tryanother(onclick="randomtry()")
+								i.fa.fa-refresh  Try Another
+				a.left.carousel-control(role="button" data-slide="prev" href="#carousel-example-generic")
+					span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+					span.sr-only Previous
+				a.right.carousel-control(role="button" data-slide="next" href="#carousel-example-generic")
+					span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+					span.sr-only Next
 
 
 block furtherscripts
 	//- scripts
-	script(src="/extralibs/slidr/slidr.js")
 	script(src="/javascripts/scripts/fireworks.js")
 	script(src="/javascripts/scripts/birthday.js")
