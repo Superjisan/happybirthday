@@ -1,4 +1,4 @@
-# happybirthday [Visit Website](http://www.happybday.co)
+# happybirthday-  [Visit Website](http://www.happybday.co)
 A website to celebrate birthdays
 
 #Set Up
