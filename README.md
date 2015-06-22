@@ -8,4 +8,4 @@ Then, go into the directory and install all npm modules using `npm install`.
 
 After that, you can run `node app` or `nodemon app` to run the app.
 
-Then visit [http://localhost:3000] in your browser to checkout the application.
+Then visit [localhost:3000](http://localhost:3000/) in your browser to checkout the application.
