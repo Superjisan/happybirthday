@@ -190,4 +190,6 @@ function quotetry() {
 
 }
 
-$('.carousel').carousel()
+$('.carousel').carousel({
+  interval: false
+})
